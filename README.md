@@ -23,9 +23,13 @@
 
 ## 👥 개발 인원
 
+<div align="center">
+
 | 조경남 | 최진웅 | 신상민 | 이명기 |
 |:---:|:---:|:---:|:---:|
 | <img src="https://avatars.githubusercontent.com/u/63902992?v=4" height="150" width="150"> <br> [@GyeongNam](https://github.com/GyeongNam) | <img src="https://avatars.githubusercontent.com/u/64189518?v=4" height="150" width="150"> <br>[@dorumamu](https://github.com/dorumamu) | <img src="https://avatars.githubusercontent.com/u/62735118?v=4" height="150" width="150"> <br>[@zztto1](https://github.com/zztto1) | <img src="https://avatars.githubusercontent.com/u/64415555?v=4" height="150" width="150"> <br>[@toropong](https://github.com/toropong) |
+
+</div>
 
 ## 🔧 팀원별 역할
 
