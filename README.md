@@ -1,258 +1,105 @@
+# 중고땅땅 - 중고물품 경매입찰 시스템
 
-## 소개 및 사이트 링크
- 
-!!생애 첫 web 사이트 개발!!
+**중고땅땅**은 사용자가 중고물품의 가치를 잘 모를 경우, 경매 시스템을 통해 공정한 가격으로 물품을 판매할 수 있도록 돕는 서비스입니다.  
+중고 거래 시장의 문제점을 해결하고 사용자들에게 더 나은 거래 환경을 제공합니다.
 
-중고물품의 가치를 잘 모를경우 경매를 통해 가치를 판단하고 판매할 수 있게 도와주는 사이트.
+## 📑 목차
+1. [개발 인원](#👥-개발-인원)
+2. [팀원별 역할](#🔧-팀원별-역할)
+3. [개발 환경](#⚙️-개발-환경)
+4. [주요 기능](#🛠-주요-기능)
+5. [시스템 구성도](#🖼-시스템-구성도)
+6. [프로젝트 수행 기간 및 개발 일정](#📅-프로젝트-수행-기간-및-개발-일정)
+7. [참고 자료 및 사용 도구](#📚-참고-자료-및-사용-도구)
+8. [배운 점 및 회고](#✨-배운-점-및-회고)
+9. [문서 및 자료](#📂-문서-및-자료)
 
-- [중고땅땅 사이트](http://silent97.cafe24.com:8081/)
+## 👥 개발 인원
 
-## 개발 인원
+| 조경남 | 최진웅 | 신상민 | 이명기 |
+|:---:|:---:|:---:|:---:|
+| <img src="https://avatars.githubusercontent.com/u/63902992?v=4" height="150" width="150"> <br> [@GyeongNam](https://github.com/GyeongNam) | <img src="https://avatars.githubusercontent.com/u/64189518?v=4" height="150" width="150"> <br>[@dorumamu](https://github.com/dorumamu) | <img src="https://avatars.githubusercontent.com/u/62735118?v=4" height="150" width="150"> <br>[@zztto1](https://github.com/zztto1) | <img src="https://avatars.githubusercontent.com/u/64415555?v=4" height="150" width="150"> <br>[@toropong](https://github.com/toropong) |
 
-- [GyeongNam](https://github.com/GyeongNam/)
-- [dorumamu](https://github.com/dorumamu)
-- [zztto1](https://github.com/zztto1)
-- [toropong](https://github.com/toropong)
+## 🔧 팀원별 역할
 
-## 개발 환경
+### 조경남
+- **개발환경 구축** 및 **DB 구조 설계** 
+- **채팅 서비스** 개발
+- **낙찰 시스템** 개발
 
-- 운영체제:   Linux (CentOS 6.10)<br>
-- 웹 서버:    Apache 2.2.15<br>
-- DB:         MySQL 5.1.73<br>
-- framework:  Laravel 7.10.3<br>
+### 이명기
+- **통계 서비스** 개발
+- **관리자 사이트** 개발
 
-## 시스템 구성도
+### 신상민
+- **관리자 사이트** 개발 
+- **회원 관리 서비스** 개발
+
+### 최진웅
+- **위치 기반 서비스** 개발
+- **게시판 서비스** 개발
+
+## ⚙️ 개발 환경
+
+![CI/CD](https://img.shields.io/badge/CI%2FCD-Enabled-brightgreen)
+![운영체제](https://img.shields.io/badge/OS-CentOS%206.10-blue)
+![웹 서버](https://img.shields.io/badge/웹%20서버-Apache%202.2.15-orange)
+![데이터베이스](https://img.shields.io/badge/DB-MySQL%205.1.73-blue)
+![프레임워크](https://img.shields.io/badge/Framework-Laravel%207.10.3-lightgrey)
+![언어](https://img.shields.io/badge/언어-PHP%2C%20HTML%2C%20CSS%2C%20JavaScript%2C%20jQuery-yellow)
+
+## 🛠 주요 기능
+
+1. **경매 서비스**
+    - 판매자가 물품을 등록하고 구매자가 경매를 통해 입찰.
+    - **타이머** 기능: 경매 시작과 종료 시간 설정, 경매 종료 시 자동으로 낙찰자 결정.
+    - **스케줄러** 기능: 경매 종료 시간에 맞춰 자동으로 낙찰자가 결정되고, **Laravel 스케줄러**를 사용하여 경매 상태 업데이트.
+    - 낙찰된 물품은 구매자와 판매자 간 거래로 연결.
+
+
+2. **회원 관리**
+    - 사용자별 정보 저장 및 수정.
+    - 관리자 페이지를 통해 회원 관리 및 경고 기능 제공.
+
+
+3. **채팅 서비스**
+    - 판매자와 구매자가 실시간으로 소통할 수 있는 **채팅 시스템** 제공.
+    - **웹소켓**과 **Pusher**를 이용한 실시간 메시지 전달.
+
+
+4. **통계 및 데이터 분석**
+    - 관리자 페이지에서 거래 통계, 방문자 수, 경매 현황 확인.
+    - **구글 애널리틱스**를 사용하여 사이트 접속자 수 및 이용 현황을 분석.
+
+
+5. **위치 기반 서비스**
+    - **카카오 지도 API**를 이용하여 경매 물품의 위치를 지도에서 확인하고, 사용자가 반경 내 가까운 경매를 찾아볼 수 있는 기능 제공.
+
+## 🖼 시스템 구성도
 ![image](https://user-images.githubusercontent.com/63902992/143731056-401abcd5-d72e-46ac-8a95-096aa6ccfee2.png)
 
-## GyeongNam
+## 📅 프로젝트 수행 기간 및 개발 일정
+- **총 개발 기간**: 16주
+- **주요 일정**:
+    1. 아이디어 구상 및 기획 (1~2주차)
+    2. 데이터베이스 설계 및 초기 화면 구성 (3~6주차)
+    3. 기능 개발 (7~14주차)
+    4. 테스트 및 배포 (15~16주차)
 
-해당 목록은 '경남' 이 만든 것만 설명되어있습니다.
+## 📚 참고 자료 및 사용 도구
 
-개발 참고 사이트: <br>[laravel.7.x](https://laravel.kr/docs/7.x) <br> [pusher](https://pusher.com/channels?utm_source=google_ads&utm_medium=prod_page&utm_campaign=brand_search&campaignid=916184871&utm_source=adwords&utm_medium=cpc&utm_campaign=Brand_Pusher_Exact&utm_term=pusher&utm_creative=264982473776&gclid=EAIaIQobChMI3uSmkbu69AIV2a6WCh0xKgJxEAAYASAAEgJYGPD_BwE)
+- **Laravel 문서**: [laravel.7.x](https://laravel.kr/docs/7.x)
+- **Pusher 채널**: [pusher](https://pusher.com/channels)
+- **구글 애널리틱스**: [Google Analytics](https://analytics.google.com)
+- **카카오 지도 API**: [Kakao Maps](https://developers.kakao.com/docs/latest/ko/map)
 
-0. 기획
-    - 스토리보드 생성
+## ✨ 배운 점 및 회고
 
-1. 개발환경 구축
-    - APM 설치: yum 명령어를 이용했다.
-    ```bash
-    yum install [설치할것]
-    ```
-    - DB 테이블: 라라벨 마이그레이션 기능을 이용해 어디서나 mysql 만 연결되면(.env) 다음 명령어 하나로 실행 가능하게 만들었다.
-    ```bash
-    php artisan migrate
-    ```
-    ![image](https://user-images.githubusercontent.com/63902992/143731238-92557889-dee3-4270-9d11-9adf8d601b66.png)
-    
-    ```php
-    Schema::create('users', function (Blueprint $table) {
-       $table->string('id')->unique();
-       $table->primary('id');
-       $table->string('name');
-       $table->string('phone');
-       $table->string('email');
-       $table->string('email_domain');
-       $table->string('gender');
-       $table->date('birthday');
-       $table->string('password');
-       $table->date('login_record')->nullable();
-       $table->binary('user_image')->nullable();
-       $table->rememberToken();
-       $table->timestamps();
-    });
-    ```
+- **협업의 중요성**: 팀원 간 원활한 소통과 협력이 프로젝트 성공의 핵심임을 깨달음.
+- **기술 학습**: Laravel 프레임워크와 PHP를 활용하여 MVC 구조의 효율성을 경험.
+- **문제 해결 능력**: 실제 중고 거래 시스템의 요구사항을 분석하고 해결 방안을 제시하는 역량 강화.
 
-2. 회원가입
-    - sign_up.blade.php 에서 form을 이용해 post 형식으로 데이터를 보내고,
-      UserController.php에서 Users Model을 불러와 저장했다. (MVC패턴)
-    - SMS 서비스:
-      [Cafe24 SMS 호스팅](https://hosting.cafe24.com/?controller=product_page&type=special&page=sms) 서비스를 이용했다.
-    ```php
-    function SendMessage(Request $request){
-    $sendNumber = $request->input('phone');
+## 📂 문서 및 자료
 
-    $sPhone1 = '010';   //처음 번호
-    $sPhone2 = '1234';   //중간 번호
-    $sPhone3 = '5678';   //마지막 번호
-
-    /******************** 인증정보 ********************/
-    $sms_url = "https://sslsms.cafe24.com/sms_sender.php"; // 전송요청 URL
-
-    $sms['user_id'] = base64_encode("sms서비스 아이디"); //SMS 아이디.
-    $sms['secure'] = base64_encode("인증키") ;//인증키
-    $sms['msg'] = base64_encode(stripslashes('보낼 메시지 내용')); 
-    $sms['rphone'] = base64_encode($sendNumber); // 받는 전화번호
-    $sms['sphone1'] = base64_encode($sPhone1);
-    $sms['sphone2'] = base64_encode($sPhone2);
-    $sms['sphone3'] = base64_encode($sPhone3);
-    $sms['mode'] = base64_encode("1"); // base64 사용시 반드시 모드값을 1로 주셔야 합니다.
-
-    $host_info = explode("/", $sms_url);
-    $host = $host_info[2];
-    $path = $host_info[3];
-
-    srand((double)microtime()*1000000);
-    $boundary = "---------------------".substr(md5(rand(0,32000)),0,10);
-    //print_r($sms);
-    // 헤더 생성
-    $header = "POST /".$path ." HTTP/1.0\r\n";
-    $header .= "Host: ".$host."\r\n";
-    $header .= "Content-type: multipart/form-data, boundary=".$boundary."\r\n";
-    $data = "";
-    // 본문 생성
-    foreach($sms AS $index => $value){
-        $data .="--$boundary\r\n";
-        $data .= "Content-Disposition: form-data; name=\"".$index."\"\r\n";
-        $data .= "\r\n".$value."\r\n";
-        $data .="--$boundary\r\n";
-    }
-    $header .= "Content-length: " . strlen($data) . "\r\n\r\n";
-
-    $fp = fsockopen($host, 80);
-
-    if ($fp) {
-        fputs($fp, $header.$data);
-        $rsp = '';
-        while(!feof($fp)) {
-            $rsp .= fgets($fp,8192);
-        }
-        fclose($fp);
-        $msg = explode("\r\n\r\n",trim($rsp));
-        $rMsg = explode(",", $msg[1]);
-        $Result= $rMsg[0]; //발송결과
-        $this->Count= $rMsg[1]; //잔여건수
-        $this->ResultCode = 0;
-    } else {
-        $this->ResultMsg = "Connection Failed";
-    }
-    return response()->json(['data'=>$rMsg]);
-    }
-    ```
-      
-3. E-mail 
-    - 비밀번호 재설정 방법을 E-mail을 이용하기로 하여 적용한 기능이다. 먼저 사용할 메일을 연결하고(.env)
-    - Mailables를 명령어로 생성하고
-    ```
-    php artisan make:mail OrderShipped
-    ```
-    ```php
-    class IDselect extends Mailable
-    {
-        use Queueable, SerializesModels;
-
-        /**
-         * Create a new message instance.
-         *
-         * @return void
-         */
-         public $data;
-         public function __construct($data)
-         {
-           $this->data =  $data;
-         }
-
-         /**
-          * Build the message.
-          *
-          * @return $this
-          */
-         public function build()
-         {
-             return $this->subject('제목')->view('내용이 될 php');
-         }
-    }
-    ```
-    컨트롤러에서 실행시키면 된다.
-    ```php
-    Mail::to($mail)->send(new IDselect($data));
-    ```
-
-4. 낙찰 시스템
-   - app\Console\Commands\auction_update.php 를 확인하면 코드를 확인하실 수 있습니다.
-   - item:success_update이라는 Command를 만들어 crontab으로 매일 0시에 실행한다.
-    ```
-    php artisan item:success_update
-    ```
-    - 경매 종료날이 지난 아이템들은 경매종료를 시켜주며 자동으로 낙찰된 순서 1~5위까지를 도출한다. <br> 만약 1위가 낙찰받지 않았다면 그 다음순위인 2위에게 권한이 넘어간다. 
-
-5. 채팅 서비스
-    - pusher를 이용해 웹소켓으로 실시간 채팅이 가능하게 만들었다. (1대1)
-    ```
-    composer require pusher/pusher-php-server "~버전"
-    ```
-    - 위에 명령어로 설치한 pusher를 연결하고 (.env) 컨트롤러에서
-    ```php
-    WebsocketEvent::dispatch(데이터);
-    ```
-    실행하면
-    ```php
-    class WebsocketEvent implements ShouldBroadcast
-    {
-        use Dispatchable, InteractsWithSockets, SerializesModels;
-
-        public $message;
-        public $id1;
-        public $id2;
-        public $time;
-
-        /**
-         * Create a new event instance.
-         *
-         * @return void
-         */
-
-        public function __construct($message, $id1, $id2, $time)
-        {
-            $this->message = $message;
-            $this->id1 = $id1;
-            $this->id2 = $id2;
-            $this->time = $time;
-        }
-
-        /**
-         * Get the channels the event should broadcast on.
-         *
-         * @return \Illuminate\Broadcasting\Channel|array
-         */
-        public function broadcastOn()
-        {
-            return new Channel('채널명');
-        }
-    }
-    ```
-    이벤트를 거쳐 같은 채널에 접속죽인 html에서 받을 수 있다.
-    ```js
-    import Echo from 'laravel-echo'
-
-    window.Pusher = require('pusher-js');
-
-    window.Echo = new Echo({
-        broadcaster: 'pusher',
-        key: process.env.MIX_PUSHER_APP_KEY,
-        cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-        forceTLS: false,
-        wsHost: window.location.hostname,
-        wsPort: 6001,
-        // enabledTransports: ['ws', 'wss'],
-        encrypted: false,
-        disableStats: false
-    });
-    ```
-    ```html
-    <script src ="{{ asset('js/app.js')}}"></script>
-    <script type="text/javascript">
-    window.Echo.channel('')
-      .listen('WebsocketEvent', (e) => {
-        //웹 소켓으로 받은 내용 처리
-        }
-      });
-    </script>
-    ```
-
-## dorumamu
-
-
-## zztto1
-
-
-## toropong
+- **[스토리보드](./docs/스토리보드.pptx)**
+- **[발표자료](./docs/중고땅땅%20발표자료.pptx)**
