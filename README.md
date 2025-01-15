@@ -4,11 +4,11 @@
   <img src="/docs/ic_JTT.png"/>
 </p>
 
-<br/>
-
 
 **중고땅땅**은 사용자가 중고물품의 가치를 잘 모를 경우, 경매 시스템을 통해 공정한 가격으로 물품을 판매할 수 있도록 돕는 서비스입니다.  
 중고 거래 시장의 문제점을 해결하고 사용자들에게 더 나은 거래 환경을 제공합니다.
+
+<br>
 
 ## 📑 목차
 1. [개발 인원](#-개발-인원)
@@ -31,6 +31,8 @@
 
 </div>
 
+<br>
+
 ## 🔧 팀원별 역할
 
 ### 조경남
@@ -50,6 +52,8 @@
 - **위치 기반 서비스** 개발
 - **게시판 서비스** 개발
 
+<br>
+
 ## ⚙️ 개발 환경
 
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-Enabled-brightgreen)
@@ -59,12 +63,15 @@
 ![프레임워크](https://img.shields.io/badge/Framework-Laravel%207.10.3-lightgrey)
 ![언어](https://img.shields.io/badge/언어-PHP%2C%20HTML%2C%20CSS%2C%20JavaScript%2C%20jQuery-yellow)
 
+<br>
+
 ## 🖼 시스템 구성도
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/63902992/143731056-401abcd5-d72e-46ac-8a95-096aa6ccfee2.png"/>
 </p>
 
+<br>
 
 ## 🛠 주요 기능
 
@@ -93,7 +100,8 @@
 5. **위치 기반 서비스**
     - **카카오 지도 API**를 이용하여 경매 물품의 위치를 지도에서 확인하고, 사용자가 반경 내 가까운 경매를 찾아볼 수 있는 기능 제공.
 
-    
+<br>    
+
 ## 📅 프로젝트 수행 기간 및 개발 일정
 - **총 개발 기간**: 16주
 - **주요 일정**:
@@ -102,6 +110,8 @@
     3. 기능 개발 (7~14주차)
     4. 테스트 및 배포 (15~16주차)
 
+<br>
+
 ## 📚 참고 자료 및 사용 도구
 
 - **Laravel 문서**: [laravel.7.x](https://laravel.kr/docs/7.x)
@@ -109,11 +119,15 @@
 - **구글 애널리틱스**: [Google Analytics](https://analytics.google.com)
 - **카카오 지도 API**: [Kakao Maps](https://developers.kakao.com/docs/latest/ko/map)
 
+<br>
+
 ## ✨ 배운 점 및 회고
 
 - **협업의 중요성**: 팀원 간 원활한 소통과 협력이 프로젝트 성공의 핵심임을 깨달음.
 - **기술 학습**: Laravel 프레임워크와 PHP를 활용하여 MVC 구조의 효율성을 경험.
 - **문제 해결 능력**: 실제 중고 거래 시스템의 요구사항을 분석하고 해결 방안을 제시하는 역량 강화.
+
+<br>
 
 ## 📂 문서 및 자료
 
